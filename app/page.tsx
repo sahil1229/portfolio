@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ContactLink } from '@/components/contact-link'
 import { Noise } from '@/components/noise'
 import { Parallax } from '@/components/parallax'
@@ -132,7 +133,11 @@ export default function Portfolio() {
                     [ PROJECT {String(i + 1).padStart(2, '0')} ]
                   </div>
                   <h3 className="mb-8 text-[clamp(2.25rem,11vw,5rem)] leading-none font-bold tracking-tighter">
-                    {project.href ? (
+                    {project.href?.startsWith('/') ? (
+                      <Link href={project.href} className="underline decoration-4 underline-offset-8 hover:opacity-70">
+                        {project.name} →
+                      </Link>
+                    ) : project.href ? (
                       <a href={project.href} target="_blank" rel="noopener noreferrer" className="underline-offset-8 hover:underline">
                         {project.name} ↗
                       </a>

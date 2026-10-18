@@ -70,6 +70,13 @@ export const PROJECTS: Project[] = [
     status: 'functional. surprisingly.',
     footnote: 'not responsible for any job rejections.',
   },
+  {
+    name: 'DONNA',
+    lines: ['my ai personal assistant.', "she makes the calls so i don't have to."],
+    status: 'on the phone. right now.',
+    footnote: 'claude + vapi + telegram. she reports back faster than people do.',
+    href: '/donna',
+  },
 ]
 
 export const SKILLS = [
@@ -116,6 +123,7 @@ export const SIDE_QUESTS = [
 
 export const CONTACTS = [
   { label: 'EMAIL', value: 'sahilshah.3142@gmail.com', href: 'mailto:sahilshah.3142@gmail.com' },
+  { label: 'ASSISTANT', value: 'donnapaulson@sahilshah.in', href: 'mailto:donnapaulson@sahilshah.in' },
   { label: 'GITHUB', value: 'github.com/sahil1229', href: 'https://github.com/sahil1229' },
   {
     label: 'LINKEDIN',
@@ -133,3 +141,23 @@ export const CONTACTS = [
     href: 'https://leetcode.com/u/sahilshah1229/',
   },
 ]
+
+export const DONNA = {
+  email: 'donnapaulson@sahilshah.in',
+  jobs: [
+    { title: 'COORDINATION', desc: "calling the group to see who's in. i count the yeses so he doesn't have to." },
+    { title: 'RESERVATIONS', desc: 'tables, bookings, errands. i come back with a confirmation number or the alternatives.' },
+    { title: 'CHECK-INS', desc: "a call just to see how someone's doing. no agenda." },
+    { title: 'MESSAGES', desc: 'passing something along the way a person would say it, not a voicemail script.' },
+    { title: 'QUESTIONS', desc: 'asking someone something on his behalf and writing down exactly what they said.' },
+    { title: 'RECALL', desc: 'he forgot a name. i call the person who remembers.' },
+  ],
+  steps: [
+    'sahil texts me on telegram.',
+    "i tell him who i'm calling and why, and wait for a yes.",
+    'i make the call.',
+    'i text him back: yes, no or maybe, with a one-line summary.',
+    "if it's happening, it goes on his calendar and everyone gets a whatsapp reminder.",
+  ],
+  stack: 'CLAUDE · VAPI · TWILIO · TELEGRAM · GOOGLE CALENDAR · NODE',
+}
