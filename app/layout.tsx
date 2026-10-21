@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist_Mono } from 'next/font/google'
+import { Geist_Mono, Instrument_Serif } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Cursor } from '@/components/cursor'
 import { SITE_URL } from '@/lib/content'
 import './globals.css'
 
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--font-instrument' })
 
 const title = 'Sahil Shah — Software Engineer'
 const description =
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#f2f0eb',
 }
 
 const personJsonLd = {
@@ -47,7 +49,7 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={geistMono.variable}>
+    <html lang="en" className={`${geistMono.variable} ${serif.variable}`}>
       <body className="font-mono antialiased">
         <script
           type="application/ld+json"
@@ -55,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         {children}
+        <Cursor />
         <Analytics />
       </body>
     </html>

@@ -1,12 +1,14 @@
 @import 'tailwindcss';
 
 @theme inline {
+  --color-paper: #f2f0eb;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: var(--font-instrument), Georgia, serif;
 }
 
 @layer base {
   body {
-    @apply bg-white text-black;
+    @apply bg-paper text-black;
   }
 
   :focus-visible {

@@ -30,7 +30,7 @@ export function ContactLink({ label, value, href }: { label: string; value: stri
         <button
           type="button"
           onClick={copy}
-          className="self-start border border-black px-2 py-0.5 text-xs tracking-widest uppercase transition-colors hover:bg-black hover:text-white sm:self-auto"
+          className="self-start border border-black px-2 py-0.5 text-xs tracking-widest uppercase transition-colors hover:bg-black hover:text-paper sm:self-auto"
         >
           {copied ? 'copied!' : 'copy'}
         </button>

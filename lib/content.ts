@@ -1,14 +1,13 @@
 export const SITE_URL = 'https://sahilshah.in'
 
 export const SECTIONS = [
-  { id: 'top', label: 'Intro' },
+  { id: 'top', label: 'The Intro' },
   { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
+  { id: 'experience', label: 'The Work' },
   { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'dsa', label: 'DSA' },
-  { id: 'photos', label: 'Photography' },
-  { id: 'side-quests', label: 'Side quests' },
+  { id: 'life', label: 'Off the clock' },
+  { id: 'photos', label: 'The Film Roll' },
+  { id: 'side-quests', label: 'Side Quests' },
   { id: 'contact', label: 'Contact' },
 ] as const
 
@@ -42,88 +41,36 @@ export const EXPERIENCE = [
   },
 ]
 
-export type Project = {
-  name: string
-  lines: [string, string]
-  status: string
-  footnote: string
-  /** Live demo or repo. Rendered as a link when present. */
-  href?: string
-}
-
-export const PROJECTS: Project[] = [
-  {
-    name: 'VYAPAAR.AI',
-    lines: ['sap hackfest 2025 winner.', 'my most polished startup-level build.'],
-    status: 'shipped. somehow.',
-    footnote: "built in a timeline that should've been illegal.",
-  },
-  {
-    name: 'OAKEN',
-    lines: ["the cleanest ui i've ever made.", 'a mindful productivity tool with ai superpowers.'],
-    status: 'live-ish.',
-    footnote: 'ui so calm it reduces cortisol.',
-  },
-  {
-    name: 'RESUME CRITIQUE',
-    lines: ['an ai resume enhancer i built at an age where', 'people still fight hover effects.'],
-    status: 'functional. surprisingly.',
-    footnote: 'not responsible for any job rejections.',
-  },
-  {
-    name: 'DONNA',
-    lines: ['my ai personal assistant.', "she makes the calls so i don't have to."],
-    status: 'on the phone. right now.',
-    footnote: 'claude + vapi + telegram. she reports back faster than people do.',
-    href: '/donna',
-  },
-]
-
-export const SKILLS = [
-  { skill: 'UI/UX', desc: "i design like i'm allergic to ugly." },
-  { skill: 'FULL-STACK', desc: 'react, next.js, typescript, firebase, shadcn.' },
-  { skill: 'AI', desc: 'llms, ocr, generative ai, openai, gemini.' },
-  { skill: 'DATABASES', desc: 'mysql, postgres, mongodb, firestore.' },
-  { skill: 'TOOLS', desc: 'git, docker, figma, cloud, caffeine.' },
-  { skill: 'DSA', desc: '300+ leetcode questions. 30% remembered.' },
-]
-
 export const PHOTOS = [
-  { id: '1536', alt: 'Sunset over dark water, clouds lit orange at the horizon', portrait: true },
-  { id: '7830', alt: 'A catamaran pulled up on a beach at dusk', portrait: false },
-  { id: '1539', alt: 'A shaded terrace looking out over a pool and garden', portrait: true },
-  { id: '1544', alt: 'Floor-to-ceiling stained glass windows glowing in a dark cathedral', portrait: true },
-  { id: '1537', alt: 'Two rhinos grazing on a green plain beneath low hills', portrait: true },
-  { id: '1543', alt: 'People lining a cliffside promenade in golden evening light', portrait: true },
-  { id: '1541', alt: 'A white yacht on the sea with a mountain silhouette at dusk', portrait: true },
-  { id: '1542', alt: 'A crowded, wood-panelled pub lit by warm lamps', portrait: false },
-  { id: '6142', alt: 'Cloud spilling over a mountain above a city', portrait: true },
+  { id: '1536', caption: 'last light.', alt: 'Sunset over dark water, clouds lit orange at the horizon', portrait: true },
+  { id: '7830', caption: 'beached. catalyst 2.', alt: 'A catamaran pulled up on a beach at dusk', portrait: false },
+  { id: '1539', caption: 'shade, finally.', alt: 'A shaded terrace looking out over a pool and garden', portrait: true },
+  { id: '1544', caption: 'god tier lighting.', alt: 'Floor-to-ceiling stained glass windows glowing in a dark cathedral', portrait: true },
+  { id: '1537', caption: 'two rhinos. zero zoom.', alt: 'Two rhinos grazing on a green plain beneath low hills', portrait: true },
+  { id: '1543', caption: 'everyone watching the same sunset.', alt: 'People lining a cliffside promenade in golden evening light', portrait: true },
+  { id: '1541', caption: 'not my yacht.', alt: 'A white yacht on the sea with a mountain silhouette at dusk', portrait: true },
+  { id: '1542', caption: 'warm. loud. good.', alt: 'A crowded, wood-panelled pub lit by warm lamps', portrait: false },
+  { id: '6142', caption: 'the mountain had a blanket.', alt: 'Cloud spilling over a mountain above a city', portrait: true },
 ]
 
-export const SIDE_QUESTS = [
+export const SIDE_QUESTS: { title: string; desc: string; href?: string }[] = [
+  {
+    title: 'BUILD WHAT MOVES INDIA — TOP 250',
+    desc: "openai × varun mayya. ai prototypes that make india's digital services simpler.\n13,000+ registrations. 250 shortlisted. one of them was mine.",
+  },
   {
     title: 'SAP HACKFEST 2025 — 1ST PLACE',
     desc: '5000+ teams. 26000+ students.\nvyapaar.ai — we built it. we shipped it. we won it.',
   },
-  {
-    title: 'SPEEDRUN: 48-HOUR MVP',
-    desc: 'shipped a product in 2 days that looked like a 2-month build.',
-  },
-  { title: 'OPEN-SOURCE', desc: "i drop utilities online when i'm bored and brave." },
-  { title: 'FAILED EXPERIMENTS', desc: 'experiment-omega — deleted 2000 lines. became stronger.' },
-  {
-    title: 'PHONE PHOTOGRAPHY — ISSUE 01',
-    desc: 'grain. light. harsh shadows. taste > pricey gear.',
-  },
-  {
-    title: 'MICRO PRODUCTS',
-    desc: 'cli-tool. chrome extension. resume enhancer.\nsmall builds. big dopamine hits.',
-  },
+  { title: 'THE DECKS', desc: 'i mix music. latest set: after cape town, vol. ii.', href: 'https://youtu.be/UDR8EI9j8PM' },
+  { title: 'THE COFFEE LAB', desc: "iced coffee experiments. some work. some don't." },
+  { title: 'PICKLEBALL', desc: 'any day. ask me for a game.' },
+  { title: 'PAINTING', desc: 'mostly when i should be sleeping.' },
+  { title: 'PHONE PHOTOGRAPHY — ISSUE 01', desc: 'grain. light. harsh shadows. taste > pricey gear.' },
 ]
 
 export const CONTACTS = [
   { label: 'EMAIL', value: 'sahilshah.3142@gmail.com', href: 'mailto:sahilshah.3142@gmail.com' },
-  { label: 'ASSISTANT', value: 'donnapaulson@sahilshah.in', href: 'mailto:donnapaulson@sahilshah.in' },
   { label: 'GITHUB', value: 'github.com/sahil1229', href: 'https://github.com/sahil1229' },
   {
     label: 'LINKEDIN',
@@ -142,22 +89,27 @@ export const CONTACTS = [
   },
 ]
 
-export const DONNA = {
-  email: 'donnapaulson@sahilshah.in',
-  jobs: [
-    { title: 'COORDINATION', desc: "calling the group to see who's in. i count the yeses so he doesn't have to." },
-    { title: 'RESERVATIONS', desc: 'tables, bookings, errands. i come back with a confirmation number or the alternatives.' },
-    { title: 'CHECK-INS', desc: "a call just to see how someone's doing. no agenda." },
-    { title: 'MESSAGES', desc: 'passing something along the way a person would say it, not a voicemail script.' },
-    { title: 'QUESTIONS', desc: 'asking someone something on his behalf and writing down exactly what they said.' },
-    { title: 'RECALL', desc: 'he forgot a name. i call the person who remembers.' },
-  ],
-  steps: [
-    'sahil texts me on telegram.',
-    "i tell him who i'm calling and why, and wait for a yes.",
-    'i make the call.',
-    'i text him back: yes, no or maybe, with a one-line summary.',
-    "if it's happening, it goes on his calendar and everyone gets a whatsapp reminder.",
-  ],
-  stack: 'CLAUDE · VAPI · TWILIO · TELEGRAM · GOOGLE CALENDAR · NODE',
-}
+export const SET_URL = 'https://youtu.be/UDR8EI9j8PM'
+
+export const ASSISTANT = { name: 'donna', email: 'donnapaulson@sahilshah.in' }
+
+export type ProjectItem = { name: string; what: string; year?: string; href?: string; ai?: boolean; tags: string[] }
+
+/** AI work first, then everything else. */
+export const PROJECT_LIST: ProjectItem[] = [
+  { name: 'Vyapaar.ai', what: 'sap hackfest 2025 winner. my most polished startup-level build.', year: '2025', ai: true, tags: ['AI', 'OCR', 'Full-stack'] },
+  {
+    name: 'CrimeSaathi',
+    what: "india's cyber crime portal, reimagined. it asks what happened and prepares the report while you're on the 1930 call.",
+    year: '2026',
+    href: 'https://cyber-saathi-zeta.vercel.app',
+    ai: true,
+    tags: ['Next.js', 'OpenAI'],
+  },
+  { name: 'Neomi', what: "finance dashboard for a kids' stem school. students, payments, seven reports, ai built in.", year: '2026', ai: true, tags: ['Next.js', 'Claude'] },
+  { name: 'Resume Critique', what: 'an ai resume enhancer. not responsible for any job rejections.', ai: true, tags: ['LLMs'] },
+  { name: 'Oaken', what: 'a mindful productivity tool with ai superpowers. ui so calm it reduces cortisol.', ai: true, tags: ['AI', 'UI'] },
+  { name: 'Threshold', what: 'offline phone app for flat move-in and move-out records. ai optional, nothing leaves the phone.', year: '2026', ai: true, tags: ['TypeScript', 'PWA'] },
+  { name: 'Dad Paid', what: 'a stupidly simple family travel expense tracker. because on every trip, dad paid.', year: '2026', href: 'https://dadpaid.vercel.app', tags: ['React', 'Supabase'] },
+  { name: 'Python tools', what: 'a web scraper, a news email digest, a to-do app. where it started.', year: '2024', tags: ['Python'] },
+]

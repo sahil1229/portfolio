@@ -21,7 +21,7 @@ export async function ogCard({ big, tagline, footer }: { big: [string, string]; 
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '0 88px',
-          background: '#fff',
+          background: '#f2f0eb',
           color: '#000',
           borderLeft: '32px solid #000',
           fontFamily: 'Geist Mono',
